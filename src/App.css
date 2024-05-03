@@ -1,38 +1,124 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.nav-flex {
+  display: flex;
+}
+
+ul li {
+  text-decoration: none;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.message {
   text-align: center;
+  margin: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.message button {
+  padding: 10px 20px;
+  background-color: rgb(67, 22, 22);
+  border-radius: 10px;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.message button:active {
+  transform: scale(0.95);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 480px;
+  border-radius: 10px;
+  height: 450px;
+  margin-bottom: -100px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: -200px;
+  background-color: beige;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  z-index: -1;
+  margin: 10px;
+}
+
+.modalBackground {
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 0, 0, 0.648);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.937);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 25px;
+  z-index: 10;
+}
+
+.modalContainer .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
 }
